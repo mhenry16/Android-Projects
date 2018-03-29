@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="prj1.csc214.prj1.TestActivity">
+
+    <TextView
+        android:id="@+id/test_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="placeholder name"/>
+
+    <TextView
+        android:id="@+id/test_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="placeholder score"/>
+
+    <Button
+    android:id="@+id/change_score"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="change score"
+    android:onClick="changeScore"/>
+
+    <Button
+        android:id="@+id/test_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="return to start screen"
+        android:onClick="returnToStartScreen"/>
+
+
+
+</LinearLayout>

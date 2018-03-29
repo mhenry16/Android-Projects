@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">prj1</string>
+    <string name="p1_name">P1 name</string>
+    <string name="score_text">score:</string>
+    <string name="initial_score">0</string>
+    <string name="change_the_name_of_p1">change the name of P1</string>
+    <string name="submit_name_change">submit name change</string>
+    <string name="p2_name">P2 name</string>
+    <string name="change_the_name_of_p2">change the name of p2</string>
+    <string name="game_1">Game 1</string>
+    <string name="game_2">Game 2</string>
+    <string name="number_of_guesses">number of guesses:</string>
+    <string name="starting_score">0</string>
+    <string name="guess">Guess</string>
+    <string name="number_of_strikes">Number of Strikes</string>
+    <string name="go_back">Go Back</string>
+</resources>

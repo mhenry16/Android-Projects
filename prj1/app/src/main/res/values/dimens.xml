@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="between_home">5dp</dimen>
+    <dimen name="above_home">40dp</dimen>
+    <dimen name="default_box_size">60dp</dimen>
+    <dimen name="keyboard_size">37dp</dimen>
+</resources>

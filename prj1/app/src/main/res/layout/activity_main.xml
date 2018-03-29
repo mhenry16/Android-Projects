@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="prj1.csc214.prj1.MainActivity">
+
+    <TextView
+    android:id="@+id/p1_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:paddingLeft="@dimen/between_home"
+    android:paddingTop="@dimen/above_home"
+    android:text="@string/p1_name"/>
+
+    <TextView
+        android:id="@+id/score_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/p1_score"
+        android:paddingRight="@dimen/between_home"
+        android:paddingTop="@dimen/above_home"
+        android:text="@string/score_text"/>
+
+    <TextView
+        android:id="@+id/p1_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:paddingRight="@dimen/between_home"
+        android:paddingTop="@dimen/above_home"
+        android:text="@string/initial_score"/>
+
+    <EditText
+        android:id="@+id/change_name1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/p1_name"
+        android:hint="@string/change_the_name_of_p1"/>
+
+    <Button
+        android:id="@+id/change_name1_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/change_name1"
+        android:text="@string/submit_name_change"
+        android:onClick="changeP1Name"/>
+
+    <TextView
+        android:id="@+id/p2_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/change_name1_button"
+        android:paddingLeft="@dimen/between_home"
+        android:paddingTop="@dimen/above_home"
+        android:text="@string/p2_name"/>
+
+    <TextView
+        android:id="@+id/score_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/p2_score"
+        android:layout_below="@+id/change_name1_button"
+        android:paddingRight="@dimen/between_home"
+        android:paddingTop="@dimen/above_home"
+        android:text="@string/score_text"/>
+
+    <TextView
+        android:id="@+id/p2_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/change_name1_button"
+        android:paddingRight="@dimen/between_home"
+        android:paddingTop="@dimen/above_home"
+        android:text="@string/initial_score"/>
+
+    <EditText
+        android:id="@+id/change_name2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/p2_name"
+        android:hint="@string/change_the_name_of_p2"/>
+
+    <Button
+        android:id="@+id/change_name2_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/change_name2"
+        android:text="@string/submit_name_change"
+        android:onClick="changeP2Name"/>
+
+    <Button
+        android:id="@+id/start_game1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/between_home"
+        android:text="@string/game_1"
+        android:onClick="startGame1"/>
+
+    <Button
+        android:id="@+id/start_game2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/between_home"
+        android:text="@string/game_2"
+        android:onClick="startGame2"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="prj1.csc214.prj1.HangmanActivity">
+
+    <Button
+        android:id="@+id/go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/go_back"
+        android:onClick="goBackToHome"/>
+    <TextView
+        android:id="@+id/p1_name_hc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/between_home"/>
+
+    <TextView
+        android:id="@+id/p2_name_hc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/between_home"/>
+
+    <TextView
+        android:id="@+id/p1_score_hc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/between_home"
+        android:layout_below="@+id/p1_name_hc"/>
+
+    <TextView
+        android:id="@+id/p2_score_hc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/between_home"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/p2_name_hc"/>
+
+    <TextView
+        android:id="@+id/striks_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/number_of_strikes"
+        android:layout_below="@+id/p1_name_hc"
+        android:layout_margin="@dimen/between_home"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/num_of_strikes"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="75sp"
+        android:textAlignment="center"
+        android:text=""
+        android:layout_below="@+id/striks_text"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/between_home" />
+
+    <TextView
+        android:id="@+id/word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="75sp"
+        android:layout_below="@+id/num_of_strikes"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Q"
+        android:layout_centerHorizontal="true"
+        android:text="Only when you have finished (either 8 X's or complete word) click the Swap User button to clear the board and start your opponents turn"/>
+
+
+    <!--<EditText-->
+        <!--android:id="@+id/guessBox"-->
+        <!--android:layout_width="@dimen/default_box_size"-->
+        <!--android:layout_height="@dimen/default_box_size"-->
+        <!--android:layout_above="@+id/guessButton"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_margin="@dimen/between_home"/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/guessButton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/guess"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_margin="@dimen/between_home"-->
+        <!--android:onClick="guessClicked"/>-->
+
+    <Button
+        android:id="@+id/Z"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="z"
+        android:layout_above="@+id/go_back"
+        android:onClick="clickZ"/>
+
+    <Button
+        android:id="@+id/X"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="x"
+        android:layout_above="@+id/go_back"
+        android:layout_toRightOf="@+id/Z"
+        android:onClick="clickX"/>
+
+    <Button
+        android:id="@+id/C"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="c"
+        android:layout_above="@+id/go_back"
+        android:layout_toRightOf="@+id/X"
+        android:onClick="clickC"/>
+
+    <Button
+        android:id="@+id/V"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="v"
+        android:layout_above="@+id/go_back"
+        android:layout_toRightOf="@+id/C"
+        android:onClick="clickV"/>
+
+    <Button
+        android:id="@+id/B"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="b"
+        android:layout_above="@+id/go_back"
+        android:layout_toRightOf="@+id/V"
+        android:onClick="clickB"/>
+
+    <Button
+        android:id="@+id/N"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="n"
+        android:layout_above="@+id/go_back"
+        android:layout_toRightOf="@+id/B"
+        android:onClick="clickN"/>
+
+    <Button
+        android:id="@+id/M"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="m"
+        android:layout_above="@+id/go_back"
+        android:layout_toRightOf="@+id/N"
+        android:onClick="clickM"/>
+
+    <Button
+        android:id="@+id/A"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="a"
+        android:layout_above="@+id/Z"
+        android:onClick="clickA"/>
+
+    <Button
+        android:id="@+id/S"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="s"
+        android:layout_above="@+id/Z"
+        android:layout_toRightOf="@+id/A"
+        android:onClick="clickS"/>
+
+    <Button
+        android:id="@+id/D"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="d"
+        android:layout_above="@+id/Z"
+        android:layout_toRightOf="@+id/S"
+        android:onClick="clickD"/>
+
+    <Button
+        android:id="@+id/F"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="f"
+        android:layout_above="@+id/Z"
+        android:layout_toRightOf="@+id/D"
+        android:onClick="clickF"/>
+
+    <Button
+        android:id="@+id/G"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="g"
+        android:layout_above="@+id/Z"
+        android:layout_toRightOf="@+id/F"
+        android:onClick="clickG"/>
+
+    <Button
+        android:id="@+id/H"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="h"
+        android:layout_above="@+id/Z"
+        android:layout_toRightOf="@+id/G"
+        android:onClick="clickH"/>
+
+    <Button
+        android:id="@+id/J"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="j"
+        android:layout_above="@+id/Z"
+        android:layout_toRightOf="@+id/H"
+        android:onClick="clickJ"/>
+
+    <Button
+        android:id="@+id/K"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="k"
+        android:layout_above="@+id/Z"
+        android:layout_toRightOf="@+id/J"
+        android:onClick="clickK"/>
+
+    <Button
+        android:id="@+id/L"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="l"
+        android:layout_above="@+id/Z"
+        android:layout_toRightOf="@+id/K"
+        android:onClick="clickL"/>
+
+    <Button
+        android:id="@+id/Q"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="q"
+        android:layout_above="@+id/A"
+        android:layout_alignParentLeft="true"
+        android:onClick="clickQ"/>
+
+    <Button
+        android:id="@+id/W"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="w"
+        android:layout_above="@+id/A"
+        android:layout_toRightOf="@+id/Q"
+        android:onClick="clickW"/>
+
+    <Button
+        android:id="@+id/E"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="e"
+        android:layout_above="@+id/A"
+        android:layout_toRightOf="@+id/W"
+        android:onClick="clickE"/>
+
+    <Button
+        android:id="@+id/R"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="r"
+        android:layout_above="@+id/A"
+        android:layout_toRightOf="@+id/E"
+        android:onClick="clickR"/>
+
+    <Button
+        android:id="@+id/T"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="t"
+        android:layout_above="@+id/A"
+        android:layout_toRightOf="@+id/R"
+        android:onClick="clickT"/>
+
+    <Button
+        android:id="@+id/Y"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="y"
+        android:layout_above="@+id/A"
+        android:layout_toRightOf="@+id/T"
+        android:onClick="clickY"/>
+
+    <Button
+        android:id="@+id/U"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="u"
+        android:layout_above="@+id/A"
+        android:layout_toRightOf="@+id/Y"
+        android:onClick="clickU"/>
+
+    <Button
+        android:id="@+id/I"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="i"
+        android:layout_above="@+id/A"
+        android:layout_toRightOf="@+id/U"
+        android:onClick="clickI"/>
+
+    <Button
+        android:id="@+id/O"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="o"
+        android:layout_above="@+id/A"
+        android:layout_toRightOf="@+id/I"
+        android:onClick="clickO"/>
+
+    <Button
+        android:id="@+id/P"
+        android:layout_width="@dimen/keyboard_size"
+        android:layout_height="@dimen/keyboard_size"
+        android:text="p"
+        android:layout_above="@+id/A"
+        android:layout_toRightOf="@+id/O"
+        android:onClick="clickP"/>
+
+    <Button
+        android:id="@+id/change_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/M"
+        android:layout_alignParentBottom="true"
+        android:text="Change User"
+        android:onClick="triggerUserChange"/>
+
+</RelativeLayout>

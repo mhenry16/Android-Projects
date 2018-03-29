@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="prj1.csc214.prj1.HotColdActivity">
+
+    <TextView
+        android:id="@+id/p1_name_hc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/between_home"/>
+
+    <TextView
+        android:id="@+id/p2_name_hc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/between_home"/>
+
+    <TextView
+        android:id="@+id/p1_score_hc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/between_home"
+        android:layout_below="@+id/p1_name_hc"/>
+
+    <TextView
+        android:id="@+id/p2_score_hc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/between_home"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/p2_name_hc"/>
+
+    <TextView
+        android:id="@+id/number_to_guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="guess a number between 1 and 10"/>
+
+    <TextView
+        android:id="@+id/first_guess_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/number_of_guesses"
+        android:layout_below="@+id/number_to_guess"
+        android:layout_margin="@dimen/between_home"/>
+
+    <TextView
+        android:id="@+id/numGuessP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/number_to_guess"
+        android:layout_toRightOf="@+id/first_guess_text"
+        android:text="@string/starting_score"
+        android:layout_margin="@dimen/between_home"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/numGuessP2"
+        android:layout_below="@+id/number_to_guess"
+        android:text="@string/number_of_guesses"
+        android:layout_margin="@dimen/between_home"/>
+
+    <TextView
+        android:id="@+id/numGuessP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/number_to_guess"
+        android:text="@string/starting_score"
+        android:layout_margin="@dimen/between_home"/>
+    
+    <EditText
+        android:id="@+id/p1_guess_box"
+        android:layout_width="@dimen/default_box_size"
+        android:layout_height="@dimen/default_box_size"
+        android:layout_above="@+id/p1_guess_button"
+        android:layout_margin="@dimen/between_home"/>
+
+    <Button
+        android:id="@+id/p1_guess_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/between_home"
+        android:onClick="p1Guess"
+        android:text="@string/guess"/>
+
+    <EditText
+        android:id="@+id/p2_guess_box"
+        android:layout_width="@dimen/default_box_size"
+        android:layout_height="@dimen/default_box_size"
+        android:layout_above="@+id/p2_guess_button"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/between_home"/>
+
+    <Button
+        android:id="@+id/p2_guess_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/between_home"
+        android:onClick="p2Guess"
+        android:text="@string/guess"/>
+
+    <Button
+        android:id="@+id/back_to_home"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/between_home"
+        android:text="@string/go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="returnToHome"/>
+
+</RelativeLayout>
